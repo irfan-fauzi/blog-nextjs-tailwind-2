@@ -1,9 +1,9 @@
 import React, { useState, createContext } from 'react'
 
-const KontenContext = createContext()
+export const KontenContext = createContext()
 
 
-export const KontenProvider = () => {
+export const KontenProvider = props => {
 
   const [content, setContent] = useState([
     {
@@ -71,8 +71,8 @@ export const KontenProvider = () => {
   ])
 
   return (
-    <KontenContext.Provider>
-      
+    <KontenContext.Provider value={ [content, setContent] }>
+      {props.children}
     </KontenContext.Provider>
   )
 }
