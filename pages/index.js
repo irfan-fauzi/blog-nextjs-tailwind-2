@@ -22,7 +22,7 @@ export default function Home() {
           </div>
 
           <div className="w-2/12 ">
-            <input className="bg-gray-700 py-2 px-6 w-full rounded-full" placeholder="Search..."/>
+            <input className="bg-gray-700 py-2 px-6 w-full rounded-full bg-search pl-10" placeholder="Search..." />
           </div>
 
         </div>
