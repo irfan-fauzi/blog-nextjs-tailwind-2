@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import MainMenuNavbar from '../components/Navbar/MainMenuNavbar'
-import SubMenuNavbar from '../components/Navbar/subMenuNavbar'
+
 
 
 export default function Home() {
@@ -56,7 +56,12 @@ export default function Home() {
               <li className="relative">
                 <a className="cursor-pointer" onClick={ () => setDropdown(!isDropdown) }>Lainnya <span>🧶 </span></a>
                   {isDropdown && (
-                   <SubMenuNavbar menuSubNavbar={menuSubNavbar} />
+                  <ul className="absolute w-[200px] rounded-md bg-gray-900 shadow-xl">
+                  {
+                    menuSubNavbar.map(({ text, url }) => (
+                     <li key={Math.random()}><a href={url} className="flex py-3 px-6  hover:bg-black transition-all border-b border-gray-500 ">{ text }</a></li>
+                  ))}
+                  </ul>   
                    )}
               </li>
             </ul>
