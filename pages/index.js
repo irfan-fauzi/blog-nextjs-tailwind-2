@@ -1,6 +1,44 @@
 import Head from 'next/head'
+import { useState } from 'react'
+import MainMenuNavbar from '../components/Navbar/MainMenuNavbar'
+import SubMenuNavbar from '../components/Navbar/subMenuNavbar'
+
 
 export default function Home() {
+
+  const [isDropdown, setDropdown] = useState(false)
+  const menuNavbar = [
+    {
+      text: 'UI Design',
+      url: '#'
+    },
+    {
+      text: 'Front End',
+      url: '#'
+    },
+    {
+      text: 'Back end',
+      url: '#'
+    },
+  ]
+
+  
+  const menuSubNavbar = [
+    {
+      text: 'Volley Ball kami',
+      url: '#'
+    },
+    {
+      text: 'Skateboard muda',
+      url: '#'
+    },
+    {
+      text: 'Javascript',
+      url: '#'
+    }
+  ]
+
+
   return (
    <div className="bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white font-patrick">
      <nav className="py-10 ">
@@ -14,10 +52,13 @@ export default function Home() {
 
           <div className="w-8/12">
             <ul className="flex space-x-10 items-center">
-              <li><a href="#">UI design</a></li>
-              <li><a href="#">Front end</a></li>
-              <li><a href="#">Back end</a></li>
-              <li><a>Lainnya</a></li>
+             <MainMenuNavbar menuNavbar={menuNavbar} />
+              <li className="relative">
+                <a className="cursor-pointer" onClick={ () => setDropdown(!isDropdown) }>Lainnya <span>🧶 </span></a>
+                  {isDropdown && (
+                   <SubMenuNavbar menuSubNavbar={menuSubNavbar} />
+                   )}
+              </li>
             </ul>
           </div>
 
