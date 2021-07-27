@@ -7,10 +7,10 @@ export default function Home() {
 
   return (
    <KontenProvider> 
-   <div className="bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white font-patrick">
-    <Navbar />
-    <FeaturedPost />     
-   </div>
+    <div className="bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white font-patrick">
+      <Navbar />
+      <FeaturedPost />     
+    </div>
    </KontenProvider>
   )
 }
