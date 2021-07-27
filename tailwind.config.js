@@ -4,9 +4,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      'patrick': ['Patrick hand', 'Arial', 'sans-serif']
+    },
   },
   variants: {
     extend: {},
+    
+    
   },
   plugins: [],
 }
