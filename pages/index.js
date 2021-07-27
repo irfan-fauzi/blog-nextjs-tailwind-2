@@ -54,9 +54,12 @@ export default function Home() {
             <ul className="flex space-x-10 items-center">
              <MainMenuNavbar menuNavbar={menuNavbar} />
               <li className="relative">
-                <a className="cursor-pointer" onClick={ () => setDropdown(!isDropdown) }>Lainnya <span>🧶 </span></a>
+                <a className="cursor-pointer flex items-center" onClick={ () => setDropdown(!isDropdown) }>Lainnya 
+                  <svg className="ml-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 6L8 10L12 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg></a>
                   {isDropdown && (
-                  <ul className="absolute w-[200px] rounded-md bg-gray-900 shadow-xl">
+                  <ul className="absolute w-[200px] rounded-md bg-gray-900 shadow-xl mt-4">
                   {
                     menuSubNavbar.map(({ text, url }) => (
                      <li key={Math.random()}><a href={url} className="flex py-3 px-6  hover:bg-black transition-all border-b border-gray-500 ">{ text }</a></li>
