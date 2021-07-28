@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useContext } from 'react'
 import CardPost from '../components/CardPost'
+import Container from '../components/Container'
 import FeaturedPost from '../components/FeaturedPost'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar/Navbar'
@@ -14,18 +15,18 @@ export default function Home() {
    
     <div className="bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white font-patrick">
       <Navbar />
-      <div className="container mx-auto">
+      <Container>
         <FeaturedPost />
 
         <div className="flex flex-wrap -mx-4 mt-6">
           {konten.map(post => (
-              <div key={Math.random()} className="w-4/12 px-4 py-6">
+              <div key={Math.random()} className="lg:w-4/12 px-4 py-6 md:w-6/12">
                <CardPost {...post}/>
              </div>
             ))}
         </div>
 
-      </div>
+      </Container>
       <Footer />    
     </div>
    

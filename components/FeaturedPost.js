@@ -17,11 +17,11 @@ const FeaturedPost = () => {
   
   return (
     <article>
-      <div className="flex -mx-6 items-center">
-        <div className="px-6 w-8/12">
+      <div className="lg:flex lg:flex-row lg:-mx-6 items-center md:flex-col md:-mx-6 -mx-6">
+        <div className="px-4 lg:w-7/12 md:w-12/12">
           <img src={img} alt="" className="rounded-xl w-full" />
         </div>
-        <div className="w-4/12 px-4">
+        <div className="lg:w-5/12 px-4 md:w-12/12">
           <InfoPost 
             categorie={categorie}
             date={date}
