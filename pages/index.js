@@ -3,15 +3,11 @@ import { useContext } from 'react'
 import CardPost from '../components/CardPost'
 import Container from '../components/Container'
 import FeaturedPost from '../components/FeaturedPost'
-import Footer from '../components/Footer'
 import Layout from '../components/Layout'
-import Navbar from '../components/Navbar/Navbar'
 import { KontenContext } from '../context/ContextKonten'
 
 
-
 export default function Home() {
-
   const [konten, setKonten] = useContext(KontenContext)
 
   return (
