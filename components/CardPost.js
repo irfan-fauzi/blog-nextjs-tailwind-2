@@ -4,7 +4,7 @@ const CardPost = ({ img, ...infoPost }) => {
   
   return (
     <article>
-      <img src={img} alt="" className="w-full rounded-lg mb-4" />
+      <img src={img} alt="" className="w-full rounded-xl mb-4" />
       <InfoPost { ...infoPost } />
     </article>
   )

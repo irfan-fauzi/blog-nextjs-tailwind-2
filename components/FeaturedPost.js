@@ -17,11 +17,11 @@ const FeaturedPost = () => {
   
   return (
     <article>
-      <div className="lg:flex lg:flex-row lg:-mx-6 items-center md:flex-col md:-mx-6 -mx-6">
-        <div className="px-4 lg:w-7/12 md:w-12/12">
-          <img src={img} alt="" className="rounded-xl w-full" />
+      <div className="lg:flex lg:flex-row lg:-mx-6 items-center md:flex-col md:-mx-6 -mx-6 ">
+        <div className="lg:px-4 px-2 lg:w-7/12 md:w-full">
+          <img src={img} alt="" className="rounded-2xl w-full" />
         </div>
-        <div className="lg:w-5/12 px-4 md:w-12/12">
+        <div className="lg:w-5/12 px-2 lg:px-4 md:w-full">
           <InfoPost 
             categorie={categorie}
             date={date}
@@ -29,7 +29,7 @@ const FeaturedPost = () => {
             content={content}
             imgWriter={imgWriter}
             nameWriter={nameWriter}
-            propfesion={profesion}
+            profesion={profesion}
           />
         </div>
       </div>
