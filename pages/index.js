@@ -1,15 +1,16 @@
 import Head from 'next/head'
+import { useState } from 'react'
 
 import CardPost from '../components/CardPost'
 import Container from '../components/Container'
 import FeaturedPost from '../components/FeaturedPost'
 import Layout from '../components/Layout'
-import posts from '../utils/posts.json'
+import mockPosts from '../utils/posts.json'
 
 
 export default function Home() {
   
-
+  const [posts, setPosts] = useState(mockPosts)
   return (
    
     <Layout>
