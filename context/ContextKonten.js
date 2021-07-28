@@ -5,7 +5,7 @@ export const KontenContext = createContext()
 
 export const KontenProvider = props => {
 
-  const [content, setContent] = useState([
+  const [konten, setKonten] = useState([
     {
       img: 'https://raw.githubusercontent.com/irfan-fauzi/blog-nextjs-wireframe/main/assets/thumbnail-2.jpg',
       categorie: 'internet',
@@ -71,7 +71,7 @@ export const KontenProvider = props => {
   ])
 
   return (
-    <KontenContext.Provider value={ [content, setContent] }>
+    <KontenContext.Provider value={ [konten, setKonten] }>
       {props.children}
     </KontenContext.Provider>
   )
