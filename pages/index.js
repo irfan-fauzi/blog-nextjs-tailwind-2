@@ -4,8 +4,11 @@ import CardPost from '../components/CardPost'
 import Container from '../components/Container'
 import FeaturedPost from '../components/FeaturedPost'
 import Footer from '../components/Footer'
+import Layout from '../components/Layout'
 import Navbar from '../components/Navbar/Navbar'
 import { KontenContext } from '../context/ContextKonten'
+
+
 
 export default function Home() {
 
@@ -13,8 +16,7 @@ export default function Home() {
 
   return (
    
-    <div className="bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white font-patrick">
-      <Navbar />
+    <Layout>
       <Container>
         <FeaturedPost />
 
@@ -27,8 +29,8 @@ export default function Home() {
         </div>
 
       </Container>
-      <Footer />    
-    </div>
+     </Layout> 
+    
    
   )
 }
