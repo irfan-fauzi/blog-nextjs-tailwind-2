@@ -52,9 +52,20 @@ const Navbar = () => {
                 </button>
             </div>
 
-          <div className="lg:w-2/12 w-6/12 flex items-center  justify-center lg:justify-start">
+          <div className="lg:w-2/12 w-6/12 flex items-center justify-center lg:justify-start">
             <div className="w-10 h-10 bg-gray-500 rounded-md flex items-center justify-center mr-4 shadow-lg">E</div>
             Epictetus
+          </div>
+
+          <div className="w-3/12 lg:hidden text-right">
+            
+              <svg className="inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.4">
+                  <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M21 21L16.65 16.65" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </g>
+              </svg>
+          
           </div>
 
           <div className="hidden lg:block w-7/12 ">
