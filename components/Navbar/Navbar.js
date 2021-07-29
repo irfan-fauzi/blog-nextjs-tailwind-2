@@ -38,14 +38,26 @@ const Navbar = () => {
   return (
     <nav className="py-10 ">
       <Container>
-        <div className="flex items-center justify-between -mx-2">
+       
+        <div className="flex items-center  -mx-2">
+            <div className="lg:hidden flex w-3/12">
+                <button>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.4">
+                  <path d="M3 12H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 6H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </g>
+                  </svg>
+                </button>
+            </div>
 
-          <div className="w-2/12 flex items-center ">
+          <div className="lg:w-2/12 w-6/12 flex items-center  justify-center lg:justify-start">
             <div className="w-10 h-10 bg-gray-500 rounded-md flex items-center justify-center mr-4 shadow-lg">E</div>
             Epictetus
           </div>
 
-          <div className="w-7/12 ">
+          <div className="hidden lg:block w-7/12 ">
             <ul className="flex space-x-10 items-center">
              <MainMenuNavbar menuNavbar={menuNavbar} />
               <li className="relative">
@@ -65,7 +77,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="w-3/12 ">
+          <div className="hidden lg:block w-3/12 ">
             <input className="bg-gray-700 py-2 px-6 w-full rounded-full bg-search pl-10" placeholder="Search..." />
           </div>
 
