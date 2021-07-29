@@ -1,6 +1,10 @@
 import React from 'react'
 
-const PostMetaTitle = ({categorie, date, title}) => {
+const PostMetaTitle = ({
+  categorie,
+  date,
+  title,
+  center}) => {
   return (
     <>
       <div className="flex items-center text-white/60 space-x-2 mt-1">
@@ -12,7 +16,7 @@ const PostMetaTitle = ({categorie, date, title}) => {
          {date}
         </div>
       </div>
-      <h2 className="text-3xl mt-3">{title}</h2>
+      <h2 className={`${center} text-3xl mt-3`}>{title}</h2>
     </>
   )
 }
