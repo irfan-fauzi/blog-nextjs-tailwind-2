@@ -25,6 +25,7 @@ const detail = () => {
        <div className="md:w-10/12 w-full mx-auto my-10">
         <img src="/detail-img.jpg" alt="detail" className="w-full rounded-lg"/>
        </div>
+
        <div className="md:w-8/12 w-full mx-auto leading-relaxed">
         <p className="text-xl mb-4">Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.</p>
 
