@@ -38,14 +38,14 @@ const Navbar = () => {
   return (
     <nav className="py-10 ">
       <Container>
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-between -mx-2">
 
-          <div className="w-2/12 flex items-center">
+          <div className="w-2/12 flex items-center ">
             <div className="w-10 h-10 bg-gray-500 rounded-md flex items-center justify-center mr-4 shadow-lg">E</div>
             Epictetus
           </div>
 
-          <div className="w-7/12">
+          <div className="w-7/12 ">
             <ul className="flex space-x-10 items-center">
              <MainMenuNavbar menuNavbar={menuNavbar} />
               <li className="relative">

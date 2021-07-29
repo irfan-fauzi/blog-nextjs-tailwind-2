@@ -7,7 +7,7 @@ const PostMetaTitle = ({
   center}) => {
   return (
     <>
-      <div className="flex items-center text-white/60 space-x-2 mt-1">
+      <div className="flex items-center text-white/60 space-x-2 mt-4">
         <div className="uppercase">
           {categorie}
         </div>
