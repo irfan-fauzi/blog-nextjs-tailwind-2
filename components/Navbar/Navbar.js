@@ -41,15 +41,12 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const [toggleSearch, setToggleSearch] = useState(false)
 
-
-
   const toggleFunction = () => {
    return setToggle(!toggle)
   }
   
-
   return (
-    <nav className="py-10 border">
+    <nav className="py-10">
       <Container>
 
         {/* Title Blog */}
@@ -73,7 +70,7 @@ const Navbar = () => {
           </div>
 
         {/* List menu navbar */}
-          <div className={`lg:w-7/12 border lg:static lg:bg-none lg:p-0 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 ${toggle ? `left-0` : `-left-full`} left-0 h-full p-10 transition-all`}>
+          <div className={`lg:w-7/12  lg:static lg:bg-none lg:p-0 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 ${toggle ? `left-0` : `-left-full`} left-0 h-full p-10 transition-all`}>
             <ToggleBtnClose toggleFunction={toggleFunction} 
               classBtn='lg:hidden absolute top-10 right-10 text-white'
             />
@@ -97,10 +94,10 @@ const Navbar = () => {
           </div>
           
           {/* Search bar / input search bar */}
-          <div className={`absolute ${toggleSearch ? `left-0` : `-left-full`} top-0 p-10 lg:w-3/12 w-full transition-all`}>
+          <div className={`absolute ${toggleSearch ? `left-0` : `-left-full`} top-0 p-10 lg:p-0 lg:static lg:w-3/12 w-full transition-all`}>
                         
            <ToggleBtnClose 
-              classBtn='absolute right-7 top-7'
+              classBtn='lg:hidden absolute right-7 top-7'
               toggleFunction={() => setToggleSearch(!toggleSearch)}
            />             
             <input className="bg-gray-700 py-3 px-6 w-full lg:rounded-full rounded-lg shadow-md bg-search pl-10" placeholder="Search..." />
