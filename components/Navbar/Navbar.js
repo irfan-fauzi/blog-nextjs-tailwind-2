@@ -3,6 +3,7 @@ import Container from '../Container';
 import MainMenuNavbar from './MainMenuNavbar';
 import ToggleBtnClose from './ToggleBtnClose';
 import ToggleBtnopen from './ToggleBtnopen';
+import Link from 'next/link'
 
 const Navbar = () => {
   
@@ -85,7 +86,11 @@ const Navbar = () => {
                   <ul className="absolute w-[200px] rounded-md bg-gray-900 shadow-xl mt-4">
                     {
                        menuSubNavbar.map(({ text, url }) => (
-                        <li key={Math.random()} className="border-b border-gray-500 last:border-0" ><a href={url} className="flex py-3 px-6  hover:bg-black transition-all ">{ text }</a></li>
+                        <li key={Math.random()} className="border-b border-gray-500 last:border-0" >
+                          <Link href={url}>
+                          <a className="flex py-3 px-6  hover:bg-black transition-all ">{ text }</a>
+                          </Link>
+                        </li>
                      ))}
                   </ul>   
                   )}

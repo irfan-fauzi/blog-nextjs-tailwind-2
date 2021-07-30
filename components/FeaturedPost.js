@@ -1,4 +1,5 @@
 import InfoPost from "./InfoPost"
+import Link from 'next/link'
 
 const FeaturedPost = () => {
 
@@ -19,7 +20,11 @@ const FeaturedPost = () => {
     <article>
       <div className="lg:flex lg:flex-row lg:-mx-6 items-center md:flex-col md:-mx-6 -mx-6 ">
         <div className="lg:px-4 px-2 xl:w-8/12 lg:w-7/12 md:w-full">
+         <Link href='/detail'>
+          <a> 
           <img src={img} alt="" className="rounded-2xl w-full" />
+          </a>
+         </Link> 
         </div>
         <div className="lg:w-5/12 px-2 xl:w-4/12 lg:px-4 md:w-full">
           <InfoPost 
