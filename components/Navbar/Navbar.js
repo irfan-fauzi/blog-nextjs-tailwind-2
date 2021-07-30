@@ -11,15 +11,15 @@ const Navbar = () => {
   const menuNavbar = [
     {
       text: 'UI Design',
-      url: '#'
+      url: '/posts'
     },
     {
       text: 'Front End',
-      url: '#'
+      url: '/posts'
     },
     {
       text: 'Back end',
-      url: '#'
+      url: '/posts'
     },
   ]
 
@@ -27,15 +27,15 @@ const Navbar = () => {
   const menuSubNavbar = [
     {
       text: 'Volley Ball kami',
-      url: '#'
+      url: '/posts'
     },
     {
       text: 'Skateboard muda',
-      url: '#'
+      url: '/posts'
     },
     {
       text: 'Javascript',
-      url: '#'
+      url: '/posts'
     }
   ]
 
@@ -53,10 +53,12 @@ const Navbar = () => {
         {/* Title Blog */}
         <div className="flex items-center  -mx-2">
           <ToggleBtnopen toggleFunction={toggleFunction}/>
-          <div className="lg:w-2/12 w-6/12 flex items-center justify-center lg:justify-start">
+          <Link href="/">
+          <div className="lg:w-2/12 w-6/12 flex items-center justify-center lg:justify-start cursor-pointer">
             <div className="w-10 h-10 bg-gray-500 rounded-md flex items-center justify-center mr-4 shadow-lg">E</div>
             Epictetus
           </div>
+          </Link>
 
         {/* Search icon in mobile */}
           <div className="w-3/12 lg:hidden text-right">

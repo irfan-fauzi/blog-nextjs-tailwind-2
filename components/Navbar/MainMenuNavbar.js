@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const MainMenuNavbar = ({ menuNavbar }) => {
   
@@ -6,7 +7,11 @@ const MainMenuNavbar = ({ menuNavbar }) => {
     <>
        {
           menuNavbar.map(({ text, url }) => (
-            <li key={Math.random()}><a href={url} className="hover:underline">{ text }</a></li>
+            <li key={Math.random()}>
+              <Link href={url}>
+                <a className="hover:underline">{ text }</a>
+              </Link>
+            </li>
       ))}
     </>
   )
