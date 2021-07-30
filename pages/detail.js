@@ -3,10 +3,15 @@ import AuthorPost from '../components/AuthorPost'
 import Container from '../components/Container'
 import Layout from '../components/Layout'
 import PostMetaTitle from '../components/PostMetaTitle'
+import Head from 'next/head'
 
 const detail = () => {
   return (
+    
     <Layout>
+      <Head>
+      <title>Detail &mdash; Epictetus</title>
+      </Head>
       <Container>
        <div className="md:w-6/12 w-full mx-auto flex flex-col  items-center ">
 
