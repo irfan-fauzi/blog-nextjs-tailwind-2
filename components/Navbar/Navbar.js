@@ -49,7 +49,7 @@ const Navbar = () => {
   
 
   return (
-    <nav className="py-10 ">
+    <nav className="py-10 border">
       <Container>
 
         {/* Title Blog */}
@@ -73,11 +73,11 @@ const Navbar = () => {
           </div>
 
         {/* List menu navbar */}
-          <div className={`lg:w-7/12 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 ${toggle ? `left-0` : `-left-full`} left-0 h-full p-10 transition-all`}>
+          <div className={`lg:w-7/12 border lg:static lg:bg-none lg:p-0 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 ${toggle ? `left-0` : `-left-full`} left-0 h-full p-10 transition-all`}>
             <ToggleBtnClose toggleFunction={toggleFunction} 
-              classBtn='absolute top-10 right-10 text-white'
+              classBtn='lg:hidden absolute top-10 right-10 text-white'
             />
-            <ul className="flex lg:space-x-10 lg:items-center flex-col space-y-4">
+            <ul className="flex lg:space-x-10 lg:items-center lg:flex-row flex-col lg:space-y-0 space-y-4">
              <MainMenuNavbar menuNavbar={menuNavbar} />
               <li className="relative">
                 <a className="cursor-pointer flex items-center" onClick={ () => setDropdown(!isDropdown) }>Lainnya 
