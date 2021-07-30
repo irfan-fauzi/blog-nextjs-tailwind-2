@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 const PostMetaTitle = ({
   categorie,
@@ -16,7 +16,13 @@ const PostMetaTitle = ({
          {date}
         </div>
       </div>
-      <h2 className={`${center ? `text-center` : ``} text-3xl mt-3`}>{title}</h2>
+      <h2 className={`${center ? `text-center` : ``} text-3xl mt-3`}> 
+        <Link href="/detail">
+          <a>
+            {title}
+          </a>
+        </Link>
+      </h2>
     </>
   )
 }

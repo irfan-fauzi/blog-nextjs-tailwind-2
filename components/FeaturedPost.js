@@ -33,7 +33,7 @@ const FeaturedPost = () => {
           />
         </div>
       </div>
-      <hr className="border-white/10 mt-4"/>
+      <hr className="lg:border-none mt-4 border border-white/20"/>
     </article>
   )
 }
