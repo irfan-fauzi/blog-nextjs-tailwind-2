@@ -38,6 +38,9 @@ const Navbar = () => {
 
   const [toggle, setToggle] = useState(false)
 
+  const toggleFunction = () => {
+   return setToggle(!toggle)
+  }
   
 
   return (
@@ -46,7 +49,7 @@ const Navbar = () => {
        
         <div className="flex items-center  -mx-2">
             <div className="lg:hidden flex w-3/12">
-                <button onClick={() => setToggle(!toggle)}>
+                <button onClick={toggleFunction}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.4">
                   <path d="M3 12H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -75,7 +78,7 @@ const Navbar = () => {
 
           <div className={`lg:w-7/12 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 ${toggle ? `left-0` : `-left-full`} left-0 h-full p-10 transition-all`}>
 
-            <button onClick={() => setToggle(!toggle)} className="absolute top-10 right-10 text-white">
+            <button onClick={toggleFunction} className="absolute top-10 right-10 text-white">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
