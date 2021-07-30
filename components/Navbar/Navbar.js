@@ -39,6 +39,9 @@ const Navbar = () => {
   ]
 
   const [toggle, setToggle] = useState(false)
+  const [toggleSearch, setToggleSearch] = useState(false)
+
+
 
   const toggleFunction = () => {
    return setToggle(!toggle)
@@ -59,12 +62,14 @@ const Navbar = () => {
 
         {/* Search icon in mobile */}
           <div className="w-3/12 lg:hidden text-right">
+            <button className="relative z-10" onClick={() => setToggleSearch(!toggleSearch)}>
               <svg className="inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.4">
                   <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M21 21L16.65 16.65" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </g>
               </svg>
+            </button>  
           </div>
 
         {/* List menu navbar */}
@@ -90,8 +95,8 @@ const Navbar = () => {
           </div>
           
           {/* Search bar / input search bar */}
-          <div className="hidden lg:block w-3/12 ">
-            <input className="bg-gray-700 py-2 px-6 w-full rounded-full bg-search pl-10" placeholder="Search..." />
+          <div className={`absolute ${toggleSearch ? `left-0` : `-left-full`} top-14 p-10 lg:w-3/12 w-full`}>
+            <input className="bg-gray-700 py-3 px-6 w-full rounded-full bg-search pl-10" placeholder="Search..." />
           </div>
 
         </div>
