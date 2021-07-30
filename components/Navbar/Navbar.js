@@ -68,9 +68,10 @@ const Navbar = () => {
           
           </div>
 
-          <div className="hidden lg:block w-7/12 ">
-            <ul className="flex space-x-10 items-center">
+          <div className="lg:w-7/12 fixed w-full bg-gradient-to-b from-gray-600 to-gray-800 top-0 left-0 h-full p-10">
+            <ul className="flex lg:space-x-10 lg:items-center flex-col space-y-4">
              <MainMenuNavbar menuNavbar={menuNavbar} />
+
               <li className="relative">
                 <a className="cursor-pointer flex items-center" onClick={ () => setDropdown(!isDropdown) }>Lainnya 
                   <svg className="ml-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,12 +79,12 @@ const Navbar = () => {
                   </svg></a>
                   {isDropdown && (
                   <ul className="absolute w-[200px] rounded-md bg-gray-900 shadow-xl mt-4">
-                  {
-                    menuSubNavbar.map(({ text, url }) => (
-                     <li key={Math.random()} className="border-b border-gray-500 last:border-0" ><a href={url} className="flex py-3 px-6  hover:bg-black transition-all ">{ text }</a></li>
-                  ))}
+                    {
+                       menuSubNavbar.map(({ text, url }) => (
+                        <li key={Math.random()} className="border-b border-gray-500 last:border-0" ><a href={url} className="flex py-3 px-6  hover:bg-black transition-all ">{ text }</a></li>
+                     ))}
                   </ul>   
-                   )}
+                  )}
               </li>
             </ul>
           </div>
